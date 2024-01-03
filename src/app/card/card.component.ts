@@ -9,5 +9,7 @@ export class CardComponent {
   @Input() Title: string = '';
   @Input() Description: string = '';
   @Input() imagePath: string = '';
+
+  background = ''
 }
  

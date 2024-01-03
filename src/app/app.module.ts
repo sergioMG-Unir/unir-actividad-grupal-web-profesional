@@ -10,6 +10,9 @@ import { CardComponent } from './card/card.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
+import { ServicesComponent } from './services/services.component';
+import { NewsComponent } from './news/news.component';
+import { WorkComponent } from './work/work.component';
 
 
 
@@ -20,6 +23,21 @@ const appRoutes: Routes = [
     path: 'about',
     component: AboutComponent,
     children: [{ path: ':id/:name', component: AboutComponent }],
+  },
+  {
+    path: 'services',
+    component: ServicesComponent,
+    children: [{ path: ':id/:name', component: ServicesComponent }],
+  },
+  {
+    path: 'news',
+    component: NewsComponent,
+    children: [{ path: ':id/:name', component: NewsComponent }],
+  },
+  {
+    path: 'work',
+    component: WorkComponent,
+    children: [{ path: ':id/:name', component: WorkComponent }],
   },
   
 ];
@@ -33,6 +51,9 @@ const appRoutes: Routes = [
     NavbarComponent,
     AboutComponent,
     FooterComponent,
+    ServicesComponent,
+    NewsComponent,
+    WorkComponent,
   ],
   imports: [BrowserModule, FormsModule, RouterModule.forRoot(appRoutes)],
   bootstrap: [AppComponent],
