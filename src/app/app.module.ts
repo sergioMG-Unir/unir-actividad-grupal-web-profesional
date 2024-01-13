@@ -13,6 +13,9 @@ import { FooterComponent } from './footer/footer.component';
 import { ServicesComponent } from './services/services.component';
 import { NewsComponent } from './news/news.component';
 import { WorkComponent } from './work/work.component';
+import { EmergencyDialogComponent } from './emergency-dialog/emergency-dialog.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatDialogModule} from "@angular/material/dialog";
 
 
 
@@ -54,8 +57,11 @@ const appRoutes: Routes = [
     ServicesComponent,
     NewsComponent,
     WorkComponent,
+    EmergencyDialogComponent,
   ],
-  imports: [BrowserModule, FormsModule, RouterModule.forRoot(appRoutes)],
+  imports: [BrowserModule, FormsModule, MatDialogModule,
+    RouterModule.forRoot(appRoutes),
+    BrowserAnimationsModule],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
