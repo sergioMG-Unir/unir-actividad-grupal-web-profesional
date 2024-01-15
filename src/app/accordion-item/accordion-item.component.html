@@ -1,0 +1,16 @@
+<div class="accordion-item">
+    <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#serviceCollapse' + uniqueId">
+            <b>{{ title }}</b>
+        </button>
+    </h2>
+    <div [id]="'serviceCollapse' + uniqueId" class="accordion-collapse collapse" data-bs-parent="#servicesAccordion">
+        <div class="accordion-body">
+            <div class="d-flex align-items-start">
+                <img [src]="imageSrc" [alt]="imageAlt" class="img-fluid me-3" style="max-width: 70px;">
+                <p>{{ description }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+

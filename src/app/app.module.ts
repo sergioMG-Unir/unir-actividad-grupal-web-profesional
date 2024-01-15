@@ -13,6 +13,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ServicesComponent } from './services/services.component';
 import { NewsComponent } from './news/news.component';
 import { WorkComponent } from './work/work.component';
+import { AccordionItemComponent } from './accordion-item/accordion-item.component';
 
 
 
@@ -54,6 +55,7 @@ const appRoutes: Routes = [
     ServicesComponent,
     NewsComponent,
     WorkComponent,
+    AccordionItemComponent,
   ],
   imports: [BrowserModule, FormsModule, RouterModule.forRoot(appRoutes)],
   bootstrap: [AppComponent],
