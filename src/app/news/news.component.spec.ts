@@ -11,7 +11,7 @@ describe('NewsComponent', () => {
       declarations: [NewsComponent]
     })
     .compileComponents();
-    
+
     fixture = TestBed.createComponent(NewsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
