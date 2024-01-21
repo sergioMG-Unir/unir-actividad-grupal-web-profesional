@@ -42,7 +42,7 @@ const appRoutes: Routes = [
     component: WorkComponent,
     children: [{ path: ':id/:name', component: WorkComponent }],
   },
-  
+
 ];
 
 // Y tenemos que anadir la declaracion aqui tambien del compo nuevo

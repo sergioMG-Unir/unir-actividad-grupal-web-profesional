@@ -16,16 +16,15 @@
   </div>
 </div>
 
-<!-- Lista de cards-->
-
-<div class="container px-4 py-5 my-5 ">
+<div class="container px-4 py-5 my-5">
   <h3 class="pb-2 border-bottom mb-4">Noticias</h3>
 
-  <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5 ">
-    <app-card class="col" Title="{{ nameCard }} {{ item }}" Description="{{ descriptionCard }} {{ item }}" imagePath="{{imagePath}}" *ngFor="let item of numberItems"></app-card>
+  <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+    <app-card class="col" *ngFor="let noticia of noticias" [Title]="noticia.title" [Description]="noticia.description" [imagePath]="noticia.imagePath"></app-card>
   </div>
+
   <div class="col-12 gap-2 d-flex justify-content-center">
-    <button (click)="seeAllNews($event)" class="btn btn-outline-secondary" >Ver todas</button>
-    <button (click)="loadMoreCards($event)" class="btn btn-primary" [hidden]="stateHidden">{{buttonName}}</button>
+    <button (click)="seeAllNews()" class="btn btn-outline-secondary">Ver todas</button>
+    <button (click)="loadMoreCards()" class="btn btn-primary" [hidden]="stateHidden">{{buttonName}}</button>
   </div>
 </div>
