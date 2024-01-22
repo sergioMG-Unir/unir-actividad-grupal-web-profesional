@@ -13,6 +13,9 @@ import { FooterComponent } from './footer/footer.component';
 import { ServicesComponent } from './services/services.component';
 import { NewsComponent } from './news/news.component';
 import { WorkComponent } from './work/work.component';
+import { EmergencyDialogComponent } from './emergency-dialog/emergency-dialog.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatDialogModule} from "@angular/material/dialog";
 import { AccordionItemComponent } from './accordion-item/accordion-item.component';
 
 
@@ -40,7 +43,7 @@ const appRoutes: Routes = [
     component: WorkComponent,
     children: [{ path: ':id/:name', component: WorkComponent }],
   },
-  
+
 ];
 
 // Y tenemos que anadir la declaracion aqui tambien del compo nuevo
@@ -57,7 +60,9 @@ const appRoutes: Routes = [
     WorkComponent,
     AccordionItemComponent,
   ],
-  imports: [BrowserModule, FormsModule, RouterModule.forRoot(appRoutes)],
+  imports: [BrowserModule, FormsModule, MatDialogModule,
+    RouterModule.forRoot(appRoutes),
+    BrowserAnimationsModule],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

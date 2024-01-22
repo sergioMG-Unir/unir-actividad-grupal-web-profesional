@@ -1,0 +1,29 @@
+.logoface {
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+}
+.logoyoutube {
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+}
+.logoinstagram {
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+}
+.description {
+    color: #333;
+    font-size: 30px;
+    margin: 10px;
+}

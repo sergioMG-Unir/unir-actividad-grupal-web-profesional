@@ -1,17 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-news',
   templateUrl: './news.component.html',
-  styleUrl: './news.component.css'
+  styleUrls: ['./news.component.css']
 })
+export class NewsComponent implements OnInit {
+  noticias: any[] = [];
 
+  constructor(private route: ActivatedRoute) {}
 
-export class NewsComponent  {
-  
-  numberCard = 1;
-  nameCard = 'Título';
-  descriptionCard = 'Descripción';
-  imagePath = "../../assets/example.png";
-
+  ngOnInit(): void {
+    this.route.data.subscribe(data => {
+      this.noticias = data.noticias;
+    });
+  }
 }

@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Noticia 1",
+    "description": "HOLA.",
+    "imagePath": "ruta/a/imagen1.jpg"
+  },
+  {
+    "title": "Noticia 2",
+    "description": "Descripción de la Noticia 2.",
+    "imagePath": "ruta/a/imagen2.jpg"
+  },
+  {
+    "title": "Noticia 3",
+    "description": "Descripción de la Noticia 3.",
+    "imagePath": "ruta/a/imagen3.jpg"
+  }
+]
