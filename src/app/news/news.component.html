@@ -1,7 +1,7 @@
 <div class="container px-4 py-5 my-5">
-    <h3 class="pb-2 border-bottom mb-4">Noticias Anteriores</h3>
+    <h3 class="pb-2 border-bottom mb-4">{{ noticiasTitulo }}</h3>
 
-    <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
-        <app-card class="col" *ngFor="let noticia of noticias" [Title]="noticia.title" [Description]="noticia.description" [imagePath]="noticia.imagePath"></app-card>
-    </div>
-</div>
+  <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+    <app-card class="col" *ngFor="let noticia of noticias" [Title]="noticia.title" [Description]="noticia.description" [imagePath]="noticia.imagePath"></app-card>
+  </div>
+</div> 

@@ -27,32 +27,31 @@ export class HomeComponent implements OnInit {
           'Echemos un vistazo a algunos de los hitos más significativos en este viaje evolutivo.',
       imagePath: '../../assets/marketing.jpeg'
     },
+    { title: 'NOTICIA 4', description: 'Descripción de la Nueva Noticia', imagePath: '../../assets/noticia1imagen.png' },
+    { title: 'NOTICIA 5', description: 'Descripción de la Nueva Noticia', imagePath: '../../assets/CocaCola.jpeg' },
+    { title: 'NOTICIA 6', description: 'Descripción de la Nueva Noticia', imagePath: '../../assets/robot.jpg' },
+    { title: 'NOTICIA 7', description: 'Descripción de la Nueva Noticia', imagePath: '../../assets/redes.png' },
+    { title: 'NOTICIA 8', description: 'Descripción de la Nueva Noticia', imagePath: '../../assets/contenido.png' },
+    { title: 'NOTICIA 9', description: 'Descripción de la Nueva Noticia', imagePath: '../../assets/vitamina.png' }
     // Agrega más noticias según sea necesario
   ];
 
+
+  displayedNewsCount = 3;
   buttonName = "Ver más noticias";
   stateHidden = false;
 
   constructor(private route: Router) { }
 
   loadMoreCards(): void {
-    if (this.noticias.length < 9) {
-      // Lógica para cargar más noticias si hay menos de 9
-      // Aquí puedes agregar más noticias al array this.noticias
-      this.noticias.push({ title: 'NOTICIA 4', description: 'Descripción de la Nueva Noticia', imagePath: '../../assets/noticia1imagen.png' });
-      this.noticias.push({ title: 'NOTICIA 5', description: 'Descripción de la Nueva Noticia', imagePath: '../../assets/CocaCola.jpeg' });
-      this.noticias.push({ title: 'NOTICIA 6', description: 'Descripción de la Nueva Noticia', imagePath: '../../assets/robot.jpg' });
-      this.noticias.push({ title: 'NOTICIA 7', description: 'Descripción de la Nueva Noticia', imagePath: '../../assets/redes.png' });
-      this.noticias.push({ title: 'NOTICIA 8', description: 'Descripción de la Nueva Noticia', imagePath: '../../assets/contenido.png' });
-      this.noticias.push({ title: 'NOTICIA 9', description: 'Descripción de la Nueva Noticia', imagePath: '../../assets/vitamina.png' +
-            '' });
+    if (this.noticias.length > this.displayedNewsCount) {
+      this.displayedNewsCount += 3;
 
-      if (this.noticias.length === 9) {
+      if (this.displayedNewsCount >= this.noticias.length) {
         this.buttonName = "Ver Todas";
         this.stateHidden = true;
       }
-    } else if (this.noticias.length >= 9 && this.noticias.length <= 12) {
-      // Lógica para navegar a otra página si hay entre 9 y 12 noticias
+    } else if (this.noticias.length > 9 && this.noticias.length <= 12) {
       this.route.navigate(['/news']);
     }
   }

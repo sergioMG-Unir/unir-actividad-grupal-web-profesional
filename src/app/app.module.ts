@@ -17,6 +17,7 @@ import { EmergencyDialogComponent } from './emergency-dialog/emergency-dialog.co
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDialogModule} from "@angular/material/dialog";
 import { AccordionItemComponent } from './accordion-item/accordion-item.component';
+import { CarouselItemComponent } from './carousel-item/carousel-item.component';
 
 
 
@@ -59,6 +60,8 @@ const appRoutes: Routes = [
     NewsComponent,
     WorkComponent,
     AccordionItemComponent,
+    EmergencyDialogComponent,
+    CarouselItemComponent
   ],
   imports: [BrowserModule, FormsModule, MatDialogModule,
     RouterModule.forRoot(appRoutes),

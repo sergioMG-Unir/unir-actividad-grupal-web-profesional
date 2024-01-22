@@ -36,4 +36,39 @@ export class ServicesComponent {
       description: "Dotamos a tu marca de una identidad visual atractiva y sugerente. Desde el diseño de logotipos hasta el desarrollo web, creamos experiencias visuales tan coherentes como cautivadoras. ¡Haz que tu marca sea la fruta más codiciada!"
     }
   ];
+
+  carousels = [
+    {
+      title: 'Alejandro Feliz',
+      description: 'Son unos chicos muy talentosos. Yo en tu lugar no me lo pensaría y los contrataría.',
+      imagePath: 'assets/Cliente1.jpg',
+      altText: 'Jamon'
+    },
+    {
+      title: 'Sonia Angula',
+      description: 'En dos minutos te montan un proyecto de Angular quepaqué.',
+      imagePath: 'assets/Clienta2.jpg',
+      altText: 'Pera'
+    },
+    {
+      title: 'Romualdo Escapa',
+      description: 'Confío tanto en ellos que les hago el encargo y me voy a la playa.',
+      imagePath: 'assets/Cliente3.jpg',
+      altText: 'Limon'
+    }
+  ];
+
+
+  currentSlideIndex = 0;
+  prevSlideIndex = 0;
+
+  loadNextSlide(): void {
+    this.prevSlideIndex = this.currentSlideIndex;
+    this.currentSlideIndex = (this.currentSlideIndex + 1) % this.carousels.length;
+  }
+
+  loadPreviousSlide(): void {
+    this.prevSlideIndex = this.currentSlideIndex;
+    this.currentSlideIndex = (this.currentSlideIndex - 1 + this.carousels.length) % this.carousels.length;
+  }
 }
